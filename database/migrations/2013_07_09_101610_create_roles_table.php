@@ -17,7 +17,7 @@ class CreateRolesTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-            $table->string('name');
+            $table->string('name'); // Author, Admin. Normal User
             $table->softDeletes();
         });
     }
