@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateSearchesTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateSearchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('searches', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
-            $table->string('status_flag');
-            $table->string('status_note');
+            $table->string('title');
+            $table->string('body');
             $table->softDeletes();
         });
     }
@@ -30,6 +30,6 @@ class CreateSearchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('searches');
+        Schema::dropIfExists('posts');
     }
 }

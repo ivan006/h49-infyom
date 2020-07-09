@@ -36,6 +36,7 @@ class CreateContactsTable extends Migration
             $table->string('company_size')->nullable();
             $table->string('company_linkedin')->nullable();
             $table->string('company_headquarters')->nullable();
+            $table->softDeletes();
         });
     }
 

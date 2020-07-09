@@ -22,6 +22,7 @@ class CreatePagesTable extends Migration
             $table->unsignedInteger('status')->nullable();
             $table->boolean('isCrawled');
             $table->timestamps();
+            $table->softDeletes();
 
         });
     }

@@ -18,6 +18,7 @@ class CreateLocationScopesTable extends Migration
             $table->timestamps();
 
             $table->longText('coords');
+            $table->softDeletes();
         });
     }
 
