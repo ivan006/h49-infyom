@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreatePostAuthorsTable extends Migration
+class CreateLocationScopesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePostAuthorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_authors', function (Blueprint $table) {
+        Schema::create('location_scopes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
-            $table->softDeletes();
+            $table->longText('coords');
         });
     }
 
@@ -28,6 +28,6 @@ class CreatePostAuthorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_authors');
+        Schema::dropIfExists('location_scopes');
     }
 }
