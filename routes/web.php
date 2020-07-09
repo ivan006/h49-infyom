@@ -19,15 +19,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-Route::resource('roles', 'RoleController');
-
-Route::resource('users', 'UserController');
-
-Route::resource('passwordResets', 'PasswordResetController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('comments', 'CommentController');
-
-Route::resource('postAuthors', 'PostAuthorController');
