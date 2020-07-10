@@ -19,3 +19,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('users', 'UserController');
+
+Route::resource('pages', 'PageController');
+
+Route::resource('contacts', 'ContactController');
+
+Route::resource('searches', 'SearchController');
+
+Route::resource('locationScopes', 'LocationScopeController');
